@@ -202,6 +202,6 @@ function asideNav() {
   var href = document.location.pathname,
   currentPage = $(`.aside-nav__link[href='${href}']`);
   currentPage.addClass('active');
-  currentPage.parents('.aside-nav__item').find('.aside-nav__link').filter(':first').addClass('active');
+  currentPage.parents('.aside-nav__item').find('.aside-nav__link:first').addClass('active');
   currentPage.parents('.aside-nav__list_dropdown').show();
 }

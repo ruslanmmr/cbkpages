@@ -2,6 +2,6 @@
 
 @include font-face("Drina", "../fonts/Drina/Drina");
 @include font-face("MontserratRegular", "../fonts/Montserrat/Montserrat-Regular");
-@include font-face("MontserratSemiBold", "../fonts/Montserrat/Montserrat-SemiBold");
-@include font-face("MontserratExtraBold", "../fonts/Montserrat/Montserrat-ExtraBold");
+@include font-face("MontserratRegular", "../fonts/Montserrat/Montserrat-SemiBold", 500);
+@include font-face("MontserratRegular", "../fonts/Montserrat/Montserrat-ExtraBold", 800);
 

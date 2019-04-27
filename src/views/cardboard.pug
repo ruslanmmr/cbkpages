@@ -1,0 +1,29 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body.body
+    .page(id="page1")
+      include blocks/header
+      +header()
+      .content
+        .container
+          .content__container
+            aside.aside
+              include blocks/aside-nav
+            main.main
+              h2.page__title Бумага для внутренних слоев<br> гофрированного картона
+              .textarea
+                .float-right
+                  img(data-src="img/gallery/image29.jpg", alt="").lazy
+                  img(data-src="img/gallery/image30.jpg", alt="").lazy
+                  img(data-src="img/gallery/image31.jpg", alt="").lazy
+                p Бумага для внутренних слоев гофрированного картона производится в соответствии с требованиями СТО 18022154-008-2018 «Бумага для внутренних слоев гофрированного картона». 
+                p Бумага для внутренних слоев гофрированного картона изготавливается в рулонах марки Б-2 массой 1 м² 80 г и 100 г.
+                p Ширина рулона устанавливают по согласованию между изготовителем и потребителем. 
+                p Диаметр рулона: от 85 до 100 см. Бумагу в рулонах другого диаметра рулонов изготавливают по согласованию между изготовителем и потребителем. 
+                p Предназначается для изготовления внутренних слоёв гофрированного картона. Допускается применение бумаги для упаковывания изделий общехозяйственного назначения.
+      include blocks/footer
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

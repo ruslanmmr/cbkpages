@@ -1,0 +1,24 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body.body
+    .page(id="page1")
+      include blocks/header
+      +header()
+      .content
+        .container
+          .content__container
+            aside.aside
+              include blocks/aside-nav
+            main.main
+              h2.page__title Дрожжи кормовые
+              .textarea
+                img(data-src="img/gallery/image36.jpg", alt="").lazy.float-right
+                p Дрожжи кормовые производятся в соответствии с требованиями ГОСТ 20083-74 «Дрожжи кормовые. Технические условия».
+                p Дрожжи кормовые изготавливаются высшей и первой групп.
+                p Кормовые дрожжи используют при производстве комбикормов, а также в качестве добавки в кормовые рационы сельскохозяйственных животных, сельскохозяйственной птицы и пушных зверей.
+      include blocks/footer
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")
