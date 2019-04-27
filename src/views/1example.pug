@@ -3,16 +3,17 @@ html(lang="ru")
   head
     include blocks/head
   body.body
-    .page.page_main
+    .page(id="page1")
       include blocks/header
       +header()
-        include blocks/nav
       .content
-        main.main
-          include blocks/about
-          include blocks/production
-          include blocks/news
-          include blocks/geography
+        .container
+          .content__container
+            aside.aside
+              include blocks/aside-nav
+            main.main
+              h2.page__title ФОТОГАЛЕРЕЯ
+              
       include blocks/footer
     script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
     script(src="js/libs.min.js")                  

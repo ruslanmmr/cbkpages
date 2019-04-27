@@ -1,0 +1,104 @@
+.aside-nav {
+  &__container {
+
+  }
+  &__list {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    background-color: #ededed;
+    &_stage2 {
+      display: none;
+      .aside-nav__item {
+        &:first-child {
+          padding-top: 10px;
+        } 
+        &:last-child {
+          padding-bottom: 10px;
+        }
+      }
+    }
+  }
+  &__item {
+    &_stage1 {
+      &:not(:last-child) {
+        border-bottom: 1px solid #2a4535;
+      }
+    }
+  }
+  &__link {
+    text-decoration: none;
+    color: inherit;
+    line-height: 1.2;
+    display: block;
+    position: relative;
+    transition: 0.3s;
+    &_stage1 {
+      padding: 0 30px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      background-color: #79c798;
+      &:hover {
+        background-color: #60b180;
+      }
+      &:before {
+        content: '';
+        display: block;
+        position: absolute;
+        width: 5px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: #004b26;
+        opacity: 0;
+        transition: 0.3s;
+      }
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        border: 7px solid transparent;	
+        border-right: 7px solid #000000;
+        transform: translateY(-50%);
+        transition: 0.3s;
+      }
+      &.active {
+        border-bottom: 1px solid #000;
+        &:before {
+          opacity: 1;
+        }
+        &:after {
+          transform: rotate(-90deg);
+        }
+      }
+    }
+    &_stage2 {
+      padding: 12px 25px;
+      display: flex;
+      align-items: center;
+      &:hover {
+        background-color: #dbdbdb;
+      }
+      &:after {
+        content: '';
+        display: block;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        border: 5px solid transparent;
+        border-left: 5px solid #000;
+        transform: translateY(-50%);
+        transition: 0.3s;
+        opacity: 0;
+      }
+      &.active {
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

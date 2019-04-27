@@ -1,27 +1,28 @@
-header.header
-  .container
-    .header__container
-      .header__section
-        .logo
-          a.logo__link(href="#")
-            img(src="img/logos/logo.svg", alt="").logo__image
-            .logo__text
-              h1.logo__title.bold АО «Кондопожский ЦБК»
-              span.logo__slogan.drina Традиции качества
-        .buttons
-          ul.buttons__list
-            li.buttons__item
-              form(action="").buttons__form
-                input(type="text" placeholder="Поиск" required).buttons__input
-                .buttons__link.buttons__link_search
-                  button(type="submit")
-                  span.buttons__overlay
-            li.buttons__item
-              a(href="#").buttons__link
-                span.semi en
-          a(href="#").mobile-button
-            span
-      .header__section
-        span.header__sub-title Ведущий производитель газетной бумаги в Европе
-      .header__section
-        include nav
+mixin header()
+  header.header
+    .container
+      .header__container
+        .header__section
+          .logo
+            a.logo__link(href="#")
+              img(src="img/logos/logo.svg", alt="").logo__image
+              .logo__text
+                h1.logo__title.bold АО «Кондопожский ЦБК»
+                span.logo__slogan.drina Традиции качества
+          .buttons
+            ul.buttons__list
+              li.buttons__item
+                form(action="").buttons__form
+                  input(type="text" placeholder="Поиск" required).buttons__input
+                  .buttons__link.buttons__link_search
+                    button(type="submit")
+                    span.buttons__overlay
+              li.buttons__item
+                a(href="#").buttons__link
+                  span.semi en
+            a(href="#").mobile-button
+              span
+        .header__section
+          span.header__sub-title Ведущий производитель газетной бумаги в Европе
+        .header__section
+          block

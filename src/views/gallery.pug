@@ -1,0 +1,55 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body.body
+    .page(id="page1")
+      include blocks/header
+      +header()
+      .content
+        .container
+          .content__container
+            aside.aside
+              include blocks/aside-nav
+            main.main
+              h2.page__title ФОТОГАЛЕРЕЯ
+              .gallery
+                .gallery-slider
+                  .gallery-slide
+                    .gallery-slide__container.cover-box
+                      img(data-lazy="img/gallery/image1.jpg", alt="").lazy
+                  .gallery-slide
+                    .gallery-slide__container.cover-box
+                      img(data-lazy="img/gallery/image1.jpg", alt="").lazy
+                  .gallery-slide
+                    .gallery-slide__container.cover-box
+                      img(data-lazy="img/gallery/image1.jpg", alt="").lazy
+                  .gallery-slide
+                    .gallery-slide__container.cover-box
+                      img(data-lazy="img/gallery/image1.jpg", alt="").lazy
+                  .gallery-slide
+                      .gallery-slide__container.cover-box
+                        img(data-lazy="img/gallery/image1.jpg", alt="").lazy
+                .gallery__nav
+                  button.gallery-button.gallery-button_prev
+                  button.gallery-button.gallery-button_next
+                  .gallery-slider-nav
+                    .gallery-slide
+                      .gallery-slide__container.cover-box
+                        img(data-lazy="img/gallery/image1.jpg", alt="").lazy
+                    .gallery-slide
+                      .gallery-slide__container.cover-box
+                        img(data-lazy="img/gallery/image1.jpg", alt="").lazy
+                    .gallery-slide
+                      .gallery-slide__container.cover-box
+                        img(data-lazy="img/gallery/image1.jpg", alt="").lazy
+                    .gallery-slide
+                      .gallery-slide__container.cover-box
+                        img(data-lazy="img/gallery/image1.jpg", alt="").lazy
+                    .gallery-slide
+                      .gallery-slide__container.cover-box
+                        img(data-lazy="img/gallery/image1.jpg", alt="").lazy
+      include blocks/footer
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

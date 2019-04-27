@@ -3,22 +3,75 @@
 
 body {
   text-rendering: optimizeSpeed;
-  font: 16px 'MontserratRegular', sans-serif;
+  font: 14px 'MontserratRegular', sans-serif;
   min-width: 320px;
   color: #000101;
   position: relative;
   overflow-x: hidden;
 }
-.wrapper {
+p {
+  line-height: 1.5;
+  margin: 0;
+  &:not(:last-child) {
+    margin-bottom: 1em;
+  }
+}
+.justify-text {
+  text-align: justify;
+  text-align-last: left;
+}
+.page {
   margin: 0 auto;
   overflow: hidden;
   position: relative;
+  &__title {
+    margin: 0;
+    font-size: 32px;
+    line-height: 1em;
+    font-weight: normal;
+    display: block;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    position: relative;
+    &:after {
+      content: '';
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      height: 1px;
+      background-color: #004b26;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+}
+.content {
+  padding: 30px 0 60px 0;
+  &__container {
+    display: flex;
+    .main {
+      width: calc(100% - 260px);
+    }
+  }
+}
+.textarea {
+  p {
+    max-width: 650px;
+  }
 }
 .container {
   max-width: 1180px;
   padding: 0 15px;
   margin: 0 auto;
   position: relative;
+}
+.main {
+}
+.aside {
+  width: 260px;
+  flex-shrink: 0;
+  padding-right: 30px;
 }
 .drina {
   font-family: 'Drina';
@@ -94,6 +147,41 @@ body {
     }
   }
 }
+.cover-box {
+  position: relative;
+  img {
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.wh {
+  height: auto;
+  width: 100%;
+}
+.ww {
+  height: 100%;
+  width: auto;
+}
+.certificates {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -7px;
+  &__block {
+    padding: 12px 7px;
+    width: 33.33%;
+    &_big {
+      width: 66.66%;
+    }
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
 @media screen and(max-width: 1200px) {
   .title {
     font-size: 24px;
@@ -102,6 +190,33 @@ body {
 @media screen and(max-width: 768px) {
   .block {
     padding: 45px 0 0 0;
+  }
+  .content__container {
+    flex-direction: column;
+  }
+  .aside {
+    width: 100%;
+    padding: 0;
+  }
+  .aside-nav {
+    display: none;
+    padding-bottom: 30px;
+  }
+  .main {
+    width: 100% !important;
+  }
+}
+@media screen and(max-width: 576px) {
+  .certificates__block {
+    width: 50%;
+    &_big {
+      width: 100%;
+    }
+  }
+  .page__title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
   }
 }
 @media screen and(max-width: 460px) {
@@ -116,6 +231,8 @@ body {
 @import "./partials/about";
 @import "./partials/production";
 @import "./partials/news";
+@import "./partials/aside";
 @import "./partials/geography";
+@import "./partials/gallery";
 
 
