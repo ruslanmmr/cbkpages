@@ -1,0 +1,16 @@
+doctype html
+html(lang="ru")
+  head
+    include blocks/head
+  body.body
+    .wrapper
+      include blocks/header
+      main.main
+        include blocks/about
+        include blocks/production
+        include blocks/news
+        include blocks/geography
+      include blocks/footer
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+    script(src="js/libs.min.js")                  
+    script(src="js/common.min.js")

@@ -1,0 +1,7 @@
+@import "../_mixins/font-face";
+
+@include font-face("Drina", "../fonts/Drina/Drina");
+@include font-face("MontserratRegular", "../fonts/Montserrat/Montserrat-Regular");
+@include font-face("MontserratSemiBold", "../fonts/Montserrat/Montserrat-SemiBold");
+@include font-face("MontserratExtraBold", "../fonts/Montserrat/Montserrat-ExtraBold");
+

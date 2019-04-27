@@ -1,0 +1,22 @@
+mixin block(title)
+  .production-block
+    .production-block__container
+      .production-block__image-container
+        img(alt="")&attributes(attributes).lazy.production-block__image
+      .production-block__title-container
+        span.production-block__title=title
+.production
+  .container
+    .production__container.block
+      .production__head 
+        span.production__title ОБЩИЙ ГОДОВОЙ ОБЪЕМ ПРОИЗВОДСТВА ЦЕЛЛЮЛОЗНО-БУМАЖНОЙ ПРОДУКЦИИ
+        span.production__label.bold ХХ ХХХ тонн
+      .production__content
+        +block("БУМАГА ГАЗЕТНАЯ")(data-src="img/products/product1.jpg")
+        +block("БУМАГА ОБЁРТОЧНАЯ")(data-src="img/products/product2.jpg")
+        +block("БУМАГА ПОТРЕБИТЕЛЬСКАЯ")(data-src="img/products/product3.jpg")
+        +block("ЛИНГОСУЛЬФАТЫ")(data-src="img/products/product4.jpg")
+        +block("ДРОЖЖИ КОРМОВЫЕ")(data-src="img/products/product5.jpg")
+        +block("ВИД ПРОДУКЦИИ")(data-src="img/products/product6.jpg")
+
+      
